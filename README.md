@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-(Ta version locale)
-=======
-(Version distante sur GitHub)
 
-> > > > > > > main
 
 # Bento-Grid
 
