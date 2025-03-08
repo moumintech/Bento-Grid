@@ -1,0 +1,113 @@
+/* Réinitialisation basique */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif; /* ou une autre police par défaut */
+}
+
+/* Mise en page générale */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f8f8;
+  padding: 20px;
+}
+
+/* Conteneur principal (grille) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "create    social    social    schedule"
+    "write     social    social    schedule"
+    "write     manage    maintain  schedule"
+    "growth    manage    maintain  optimize";
+  gap: 10px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 30px;
+}
+
+/* Styles génériques pour chaque item de la grille */
+.grid-item {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ajustement des images */
+.grid-item img {
+  max-width: 80%;
+  max-height: 120px;
+  object-fit: contain;
+  margin: 10px auto;
+}
+
+/* Zones de la grille (grid-area) */
+.grid-create {
+  grid-area: create;
+  background: #fce7c5;
+  grid-row: span 2; /* occupe deux lignes en hauteur */
+  padding: 25px;
+}
+.grid-socialMedia {
+  grid-area: social;
+  background: #7d5df6;
+  color: white;
+  grid-column: span 2; /* occupe deux colonnes en largeur */
+  grid-row: span 2; /* occupe deux lignes en hauteur */
+  padding: 40px;
+  font-size: 24px;
+}
+.grid-schedule {
+  grid-area: schedule;
+  background: #d8b4fe;
+  grid-row: span 2; /* occupe deux lignes en hauteur */
+  padding: 30px;
+}
+.grid-manage {
+  grid-area: manage;
+  background: #ffffff;
+  padding: 25px;
+}
+.grid-maintain {
+  grid-area: maintain;
+  background: #f59e0b;
+  padding: 30px;
+}
+.grid-write {
+  grid-area: write;
+  background: #fdba74;
+  padding: 25px;
+}
+.grid-optimize {
+  grid-area: optimize;
+  background: #ffffff;
+  padding: 25px;
+}
+.grid-grow {
+  grid-area: growth;
+  background: #7d5df6;
+  color: white;
+  grid-column: span 2; /* occupe deux colonnes en largeur */
+  padding: 30px;
+  font-size: 22px;
+}
+
+/* Couleur personnalisée pour le <span> */
+span {
+  color: #7d5df6;
+  font-style: italic;
+}
